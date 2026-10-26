@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {  
-   float a,w,d,c;
+   float a,w,d,c;//a is current account balance,w is withdrawal amount,d is deposit amount
    int choice;
    printf("The current account balance:");
    scanf("%f",&a);
@@ -16,14 +16,16 @@ int main()
       printf("\nThe withdrawal amount:");   
       scanf("%f",&w);
       if(w<=a)
-        printf("\nTransaction successful and remaining balance is %.2f",c=a-w);
+         c=a-w;
+        printf("\nTransaction successful and remaining balance is %.2f",c);
       else
         printf("\nInsufficient balance");  
       break;
    case 3:
       printf("\nThe deposit amount:");   
       scanf("%f",&d);  
-      printf("\nDeposit successful and updated balance is %.2f",c=a+d);
+      c=a+d;
+      printf("\nDeposit successful and updated balance is %.2f",c);
       break;
     default:
       printf("\nInvalid option");  }
